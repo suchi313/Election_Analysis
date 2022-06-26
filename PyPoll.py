@@ -40,6 +40,7 @@ with open(file_to_load) as election_data:
             candidate_votes[candidate_name] = 0
         # Add a vote to that candidate's count.
         candidate_votes[candidate_name] += 1
+        
          
 # Print the candidate vote dictionary.
 #print(candidate_votes)
@@ -86,4 +87,5 @@ with open(file_to_save,"w") as txt_file:
         f"Winning Percentage: {winning_percentage:.1f}%\n"
         f"-------------------------\n")
     print(winning_candidate_summary)
+    # Save the winning candidate's results to the text file.
     txt_file.write(winning_candidate_summary)
